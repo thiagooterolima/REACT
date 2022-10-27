@@ -2,28 +2,32 @@ import React from 'react';
 import { StyleSheet, Button, View, SafeAreaView, Text, Alert} from 'react-native';
 
 const BotCat = () => (
-
+  
   <View style={estilo.container}>
-
+    
       <View style={estilo.direito}>
+   
       <Button
         title='Avançar'
          color='green'
          onPress={() => Alert.alert('AVANÇAR!')}
          />
-
+ 
+          
          </View>  
+         
 
       <View style={estilo.esquerdo}>  
-      <Button
+        <Button 
         title="Voltar"
         color="red"
-         onPress={() => Alert.alert('VOLTOU!')}
-       
+        onPress={() => Alert.alert('VOLTOU!')}
+        
         />
        </View>  
 
       </View>
+      
 
 );
 
@@ -32,13 +36,16 @@ const BotCat = () => (
 const estilo = StyleSheet.create({
 
 direito : {
-  
+      
   
 },
 
  esquerdo : {
+  color: 'blue',
+  marginRight: 190,
   
-  paddingRight:190,
+  
+  
  
  },
 
@@ -49,6 +56,11 @@ direito : {
  marginTop:450,
  },
 
+
+title: {
+  color: 'blue',
+  
+}
   
  
 }); 
