@@ -1,37 +1,54 @@
 import React from 'react';
-import { StyleSheet, Button, View, SafeAreaView, Text, Alert} from 'react-native';
+import { StyleSheet, Button, View, SafeAreaView, Text, Alert, TextComponent,TouchableOpacity,onChange} from 'react-native';
 
-const BotCat = () => (
+const BotCat = () => {
+    
+    return (
+    
 
   <View style={estilo.container}>
 
-      <View style={estilo.direito}>
+    <View style={estilo.direito}>
       <Button
-        title='Avançar'
+         title='Avançar'
          color='green'
          onPress={() => Alert.alert('AVANÇAR!')}
          />
+         
+        </View>
 
-         </View>  
+     <View style={estilo.esquerdo}>
 
-      <View style={estilo.esquerdo}>  
       <Button
-        title="Voltar"
-        color="red"
-         onPress={() => Alert.alert('VOLTOU!')}
+         color='red'
+         title ="CANCELAR"
+         onPress={() => Alert.alert('VOLTOU!')}>
+         
        
-        />
-       </View>  
+        </Button>
+        </View>
+
+        
+    
 
       </View>
+    
 
-);
+
+    
+                 
+
+    )
+ }
+
+
 
 
 
 const estilo = StyleSheet.create({
 
 direito : {
+    backgroundColor:'black'
   
   
 },
@@ -39,6 +56,13 @@ direito : {
  esquerdo : {
   
   paddingRight:190,
+  borderBottomColor:'green',
+  borderColor:'green',
+  color:'green',
+  title:'Voltar'
+  
+  
+  
  
  },
 
@@ -46,8 +70,13 @@ direito : {
  justifyContent:'center',
  marginHorizontal:16,
  flexDirection:'row-reverse',
- marginTop:450,
+ marginTop:'160%',
  },
+
+ posiçao:{
+    position:'absolute',
+    color:'green'
+ }
 
   
  

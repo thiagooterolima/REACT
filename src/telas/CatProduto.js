@@ -6,8 +6,9 @@ const Categoria =() => {
     return(
 
         <SafeAreaView style={styles.container}>
-            <Text style={styles.text}>'OLA'</Text>
-            <BotCat></BotCat>
+            <Text style = {styles.text} >Vendedor : Ciclando</Text>
+           <BotCat></BotCat>
+           
             
          </SafeAreaView>
     );
@@ -16,12 +17,15 @@ const Categoria =() => {
 
 const styles = StyleSheet.create({
     container: {
-      alignItems: 'center',
-      justifyContent: 'center',
+        justifyContent:'center',
+        alignItems:'center',
+      
     },
 
     text:{
         color:'black',
+        marginTop:'20%',
+        marginRight:'60%'
         
     }
   });
