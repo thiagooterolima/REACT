@@ -11,7 +11,7 @@ const BotCat = () => {
 
      <View style={estilo.direito}>
       <Button
-         title='Avançar'
+         title='CONFIRMAR'
          color='green'
          onPress={() => Alert.alert('AVANÇAR!')}
          />
@@ -45,20 +45,14 @@ const estilo = StyleSheet.create({
 
 direito : {
 
-    backgroundColor:'black'
+    
    
 },
 
  esquerdo : {
-  color: 'blue',
-  marginRight: 190,
   paddingRight:190,
-  borderBottomColor:'green',
-  borderColor:'green',
-  color:'green',
-  title:'Voltar'
   
-
+  
  },
 
  container : {
@@ -69,13 +63,10 @@ direito : {
  },
 
  
- posiçao:{
-    position:'absolute',
-    color:'green'
- },
+ 
 
 }); 
 
 
-export default BotaoCat;
+export default BotCat;
 

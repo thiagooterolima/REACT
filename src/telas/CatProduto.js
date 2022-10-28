@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,SafeAreaView,Button} from 'react-native';
 import BotCat from '../../componets/BotaoCat';
+import Vendedor from '../../componets/vendedor';
 
 const Categoria =() => {
     return(
 
         <SafeAreaView style={styles.container}>
-            <Text style = {styles.text} >Vendedor : Ciclando</Text>
+            <Vendedor></Vendedor>
            <BotCat></BotCat>
            
             

@@ -7,10 +7,12 @@ export default function App() {
   return (
     
    <View>
-    {/*
+    
     <Categoria/>
-  */}
+  
+  {/*
   <Pagamento/>
+  */}
   
     </View>
   
