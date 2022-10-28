@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, Button, View, SafeAreaView, Text, Alert, TextComponent,TouchableOpacity,} from 'react-native';
 
 
-const BotCat = () => {
-    
+//const BotCat = ({navigation}) => {
+    export default function BotCat({navigation}){
     return (
     
 
@@ -13,7 +13,8 @@ const BotCat = () => {
       <Button
          title='CONFIRMAR'
          color='green'
-         onPress={() => Alert.alert('AVANÇAR!')}
+         //onPress={() => Alert.alert('AVANÇAR!')}
+         onPress={() => navigation.navigate('Pagamento')}
          />
         
         </View>
@@ -59,7 +60,7 @@ direito : {
  justifyContent:'center',
  marginHorizontal:16,
  flexDirection:'row-reverse',
- marginTop:'160%',
+ marginTop:'145%',
  },
 
  
@@ -68,5 +69,5 @@ direito : {
 }); 
 
 
-export default BotCat;
+//export default BotCat;
 

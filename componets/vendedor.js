@@ -15,6 +15,7 @@ const Vendedor = () => {
             
             
             
+            
           </SafeAreaView>
 
           
@@ -34,14 +35,12 @@ const estilos = StyleSheet.create ({
         justifyContent: 'flex-start',
         height: 50,
         flexDirection: 'row',
-        marginTop: 40,
-        
         
     },
 
     input: {
         fontSize: 15,
-        marginRight: 120,
+        marginRight: 130,
     },
 
     texto: {

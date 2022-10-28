@@ -1,20 +1,46 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,SafeAreaView,Button} from 'react-native';
-import BotCat from '../../componets/BotaoCat';
+import { StyleSheet, Text, View,SafeAreaView,Button,Alert,} from 'react-native';
 import Vendedor from '../../componets/vendedor';
 
-const Categoria =() => {
+
+
+     export default function Categoria ({navigation}){
+
     return(
 
         <SafeAreaView style={styles.container}>
-            <Vendedor></Vendedor>
-           <BotCat></BotCat>
-           
+           <Vendedor></Vendedor>
+
+            <View style={styles.botao}>
+
+               <View style={styles.direito}>
+                <Button
+                 title='AVANÇAR'
+                 color='green'
+                 onPress={() => navigation.navigate('Pagamento')}
+                 />
+               </View>
+               
+              <View style={styles.esquerdo}> 
+               <Button
+                color='red'
+                title ="CANCELAR"
+                onPress={() => Alert.alert('PEDIDO CANCELADO')}
+                />
+              </View>
+       
+             </View>
+            
+
+
+
+          
             
          </SafeAreaView>
     );
 
 }
+
 
 const styles = StyleSheet.create({
     container: {
@@ -23,14 +49,24 @@ const styles = StyleSheet.create({
       
     },
 
-    text:{
-        color:'black',
-        marginTop:'20%',
-        marginRight:'60%'
+    botao : {
+        justifyContent:'center',
+        marginHorizontal:16,
+        flexDirection:'row-reverse',
+        marginTop:'165%',
+    },
+
+    esquerdo : {
+        paddingRight:190,
+    },     
         
+    direit0 : {
+
     }
   });
 
+  
 
-  export default Categoria;
+
+
   

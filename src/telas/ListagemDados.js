@@ -1,21 +1,21 @@
-import { SafeAreaView, StyleSheet, Text, View,Button,Alert } from 'react-native';
-//import Categoria from './src/telas/CatProduto';
-import React from 'react';
 import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View,SafeAreaView,Button,Alert,} from 'react-native';
 import Vendedor from '../../componets/vendedor';
- 
 
-export default function Pagamento ({navigation}) {
-    return (
+
+export default function Dados ({navigation}){
+    return(
+       
         <SafeAreaView>
           
         <Vendedor/>
         <View style={estilos.botao}>
             <View style={estilos.direito}>
             <Button
-                 title='AVANÇAR'
+                 title='CONFIRMAR'
                  color='green'
-                 onPress={() => navigation.navigate('Dados')}
+                 onPress={() => Alert.alert('Pedido Confirmado')}
+                 
                  />
             </View>     
 
@@ -23,8 +23,7 @@ export default function Pagamento ({navigation}) {
             <Button
                 color='red'
                 title ="VOLTAR"
-               
-                onPress={() => navigation.navigate('Categoria')}
+                onPress={() => navigation.navigate('Pagamento')}
                 />
             </View>         
 
