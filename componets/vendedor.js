@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TextInput, SafeAreaView, FlatList } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, SafeAreaView } from 'react-native';
 import React from 'react';
 
 
@@ -12,14 +12,7 @@ const Vendedor = () => {
             <TextInput style={estilos.input} placeholder='Fulano'></TextInput>            
             <Text style={estilos.texto}>Cliente </Text>
             <TextInput style={estilos.input} placeholder='Alterar'></TextInput> 
-            
-            
-            
-            
           </SafeAreaView>
-
-          
-        
     );
 
 }

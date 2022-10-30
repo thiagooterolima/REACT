@@ -1,5 +1,4 @@
 import { SafeAreaView, StyleSheet, Text, View,Button,Alert } from 'react-native';
-//import Categoria from './src/telas/CatProduto';
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import Vendedor from '../../componets/vendedor';
@@ -7,15 +6,15 @@ import Vendedor from '../../componets/vendedor';
 
 export default function Pagamento ({navigation}) {
     return (
-        <SafeAreaView>
-          
-        <Vendedor/>
+        <SafeAreaView> 
+          <Vendedor/>
+
         <View style={estilos.botao}>
             <View style={estilos.direito}>
             <Button
                  title='AVANÇAR'
                  color='green'
-                 onPress={() => navigation.navigate('Dados')}
+                 onPress={() => navigation.navigate('Confirmar Dados')}
                  />
             </View>     
 
@@ -23,15 +22,9 @@ export default function Pagamento ({navigation}) {
             <Button
                 color='red'
                 title ="VOLTAR"
-               
-                onPress={() => navigation.navigate('Categoria')}
+                onPress={() => navigation.navigate('Categoria Produto')}
                 />
             </View>         
-
-
-
-
-
 
         </View>
         </SafeAreaView>
@@ -51,7 +44,7 @@ const estilos = StyleSheet.create ({
       justifyContent:'center',
       marginHorizontal:16,
       flexDirection:'row-reverse',
-      marginTop:'165%',
+      marginTop:'85%',
     },
     direito: {
 

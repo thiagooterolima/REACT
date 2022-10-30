@@ -7,9 +7,9 @@ export default function Dados ({navigation}){
     return(
        
         <SafeAreaView>
-          
-        <Vendedor/>
-        <View style={estilos.botao}>
+          <Vendedor/>
+
+         <View style={estilos.botao}>
             <View style={estilos.direito}>
             <Button
                  title='CONFIRMAR'
@@ -26,11 +26,6 @@ export default function Dados ({navigation}){
                 onPress={() => navigation.navigate('Pagamento')}
                 />
             </View>         
-
-
-
-
-
 
         </View>
         </SafeAreaView>
@@ -50,7 +45,7 @@ const estilos = StyleSheet.create ({
       justifyContent:'center',
       marginHorizontal:16,
       flexDirection:'row-reverse',
-      marginTop:'165%',
+      marginTop:'85%',
     },
     direito: {
 
@@ -59,5 +54,7 @@ const estilos = StyleSheet.create ({
     esquerdo:{
         paddingRight:190,
     }
+
+    
     
 })

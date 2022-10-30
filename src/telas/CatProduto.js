@@ -1,18 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,SafeAreaView,Button,Alert,} from 'react-native';
+import  SelectList  from 'react-native-dropdown-select-list';
 import Vendedor from '../../componets/vendedor';
+import Drop from '../../componets/Drop';
 
 
 
      export default function Categoria ({navigation}){
+     return(
 
-    return(
-
-        <SafeAreaView style={styles.container}>
-           <Vendedor></Vendedor>
-
+        
+        <SafeAreaView> 
+          
+               <Vendedor></Vendedor>
+           
+                <Drop></Drop>
+    
             <View style={styles.botao}>
-
+                 
                <View style={styles.direito}>
                 <Button
                  title='AVANÇAR'
@@ -30,30 +35,23 @@ import Vendedor from '../../componets/vendedor';
               </View>
        
              </View>
-            
 
 
+         </SafeAreaView> 
 
-          
-            
-         </SafeAreaView>
+       
     );
 
 }
 
 
 const styles = StyleSheet.create({
-    container: {
-        justifyContent:'center',
-        alignItems:'center',
-      
-    },
-
     botao : {
         justifyContent:'center',
         marginHorizontal:16,
         flexDirection:'row-reverse',
-        marginTop:'165%',
+        marginTop:'82%',
+        
     },
 
     esquerdo : {
