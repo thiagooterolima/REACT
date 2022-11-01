@@ -15,7 +15,7 @@ const Pagamento = () => {
 
 
         <BotaoCat/>
-
+    
         </SafeAreaView>
     );
 }
