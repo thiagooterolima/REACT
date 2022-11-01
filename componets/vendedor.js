@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TextInput, SafeAreaView, FlatList } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, SafeAreaView } from 'react-native';
 import React from 'react';
 
 
@@ -12,13 +12,7 @@ const Vendedor = () => {
             <TextInput style={estilos.input} placeholder='Fulano'></TextInput>            
             <Text style={estilos.texto}>Cliente </Text>
             <TextInput style={estilos.input} placeholder='Alterar'></TextInput> 
-            
-            
-            
           </SafeAreaView>
-
-          
-        
     );
 
 }
@@ -34,14 +28,12 @@ const estilos = StyleSheet.create ({
         justifyContent: 'flex-start',
         height: 50,
         flexDirection: 'row',
-        marginTop: 40,
-        
         
     },
 
     input: {
         fontSize: 15,
-        marginRight: 120,
+        marginRight: 130,
     },
 
     texto: {

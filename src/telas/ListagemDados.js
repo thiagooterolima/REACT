@@ -1,25 +1,33 @@
-import { SafeAreaView, StyleSheet, Text, View,Button,Alert } from 'react-native';
-import React from 'react';
 import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View,SafeAreaView,Button,Alert,} from 'react-native';
 import Vendedor from '../../componets/vendedor';
- 
 
-export default function Pagamento ({navigation}) {
-    return (
-        <SafeAreaView> 
+
+export default function Dados ({navigation}){
+    return(
+       
+        <SafeAreaView>
           <Vendedor/>
 
-        <View style={estilos.botao}>
+         <View style={estilos.botao}>
             <View style={estilos.direito}>
             <Button
-                 title='AVANÇAR'
+                 title='CONFIRMAR'
                  color='green'
-                 onPress={() => navigation.navigate('Confirmar Dados')}
+                 onPress={() => Alert.alert('Pedido Confirmado')}
+                 
                  />
             </View>     
 
-        
-           </View>    
+            <View style={estilos.esquerdo}>
+            <Button
+                color='red'
+                title ="VOLTAR"
+                onPress={() => navigation.navigate('Pagamento')}
+                />
+            </View>         
+
+        </View>
         </SafeAreaView>
     );
 }
@@ -46,5 +54,7 @@ const estilos = StyleSheet.create ({
     esquerdo:{
         paddingRight:190,
     }
+
+    
     
 })
