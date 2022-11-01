@@ -19,7 +19,7 @@ export default function Pagamento ({navigation}) {
             </View>     
 
         
-           </View>    
+</View>    
         </SafeAreaView>
     );
 }
