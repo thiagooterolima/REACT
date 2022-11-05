@@ -30,6 +30,26 @@ export default function Pagamento ({navigation}) {
                 <Drop1/>
             </View>
 
+            <View style={estilos.containerValor}> 
+                <TextInput style={estilos.borda1} placeholder="0,00">Valor</TextInput>
+                <TextInput style={estilos.borda1} placeholder="dd/mm/aa"></TextInput>
+                <View style={estilos.adicionar}><Button title='Adicionar' color='green' onPress={() => navigation.navigate}/></View>
+            </View>
+
+            <View><Text style={estilos.textoPagamento}>Pagamentos</Text></View>
+
+            <View style={estilos.ValorData}>
+                <View>
+                    <Text style={estilos.fonte}>Valor</Text>
+                    <TextInput style={estilos.fonteInput} placeholder='R$100:00'></TextInput>
+                </View>
+
+                <View>
+                    <Text style={estilos.fonte}>Data</Text>
+                    <TextInput style={estilos.fonteInput} placeholder='05/11/2022'></TextInput>
+                </View>
+            </View>
+
         <View style={estilos.botao}>
             <View style={estilos.direito}>
             <Button
@@ -67,12 +87,18 @@ const estilos = StyleSheet.create ({
       justifyContent:'center',
       marginHorizontal:16,
       flexDirection:'row-reverse',
-      marginTop:'85%',
+      marginTop: '32%',
+      
+      
     },
     
     
     esquerdo:{
         paddingRight:190,
+    },
+
+    direito:{
+
     },
 
     pagamentoTexto: {
@@ -101,12 +127,26 @@ const estilos = StyleSheet.create ({
         fontSize: 18,
     },
 
-    borda:{ // refere a borda do input
+    borda:{ // refere a borda do input 
         borderWidth: 1,
         width: 100,
         borderRadius: 10,
         marginLeft: 10,
         color: 'green',
+    },
+
+    borda1: { // borda do segundo input do valor valor
+        borderWidth:1,
+        width: 100,
+        borderRadius: 20,
+        paddingLeft: 8,
+        
+    },
+
+    containerValor: { // container do input de valor e data
+        marginLeft: 15,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
 
     total3: { //refere a view onde tem o valor pago e o input
@@ -120,6 +160,39 @@ const estilos = StyleSheet.create ({
     totalPago: { //refere a palavra Valor pago
         fontSize: 17,
         color: 'green'
-    }
+    },
+
+    adicionar: { //botao adicionar
+        borderWidth: 1,
+        marginRight: 10,
+        
+    },
+
+    textoPagamento:{// refere a o texto pagamento em baixo de valor e data
+        fontSize: 19,
+        color: 'green',
+        fontWeight: 'bold',
+        paddingTop: 20,
+        marginLeft: 27,
+        marginTop: 30,
+        paddingBottom: 15,
+    },
+
+    ValorData:{
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        marginLeft: -90,
+        
+    },
+
+    fonte: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+
+    fonteInput:{
+        fontSize:18,
+    },
    
+
 });
