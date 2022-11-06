@@ -169,6 +169,7 @@ const styles = StyleSheet.create({
         marginHorizontal:16,
         flexDirection:'row-reverse',
         marginTop:'5%',
+                
         
     },
 
