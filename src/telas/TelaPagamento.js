@@ -32,7 +32,7 @@ export default function Pagamento ({navigation}) {
 
             <View style={estilos.containerValor}> 
                 <TextInput style={estilos.borda1} placeholder="0,00">Valor</TextInput>
-                <TextInput style={estilos.borda1} placeholder="dd/mm/aa"></TextInput>
+                <TextInput style={estilos.borda2} placeholder="dd/mm/aa"></TextInput>
                 <View style={estilos.adicionar}><Button title='Adicionar' color='green' onPress={() => navigation.navigate}/></View>
             </View>
 
@@ -141,6 +141,15 @@ const estilos = StyleSheet.create ({
         borderRadius: 20,
         paddingLeft: 8,
         
+        
+    },
+
+    borda2: {
+        textAlign: 'center',
+        borderWidth: 1,
+        width: 100,
+        borderRadius: 20,
+
     },
 
     containerValor: { // container do input de valor e data
@@ -192,6 +201,7 @@ const estilos = StyleSheet.create ({
 
     fonteInput:{
         fontSize:18,
+        
     },
    
 
