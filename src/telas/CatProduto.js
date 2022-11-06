@@ -259,6 +259,7 @@ const styles = StyleSheet.create({
         marginVertical:-10,
         marginLeft:21,
     }
+    //ddd
 
   });
 
