@@ -97,7 +97,7 @@ const estilos = StyleSheet.create ({
         paddingRight:190,
     },
 
-    direito:{
+    direito:{// tag vazia
 
     },
 
