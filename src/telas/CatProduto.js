@@ -9,27 +9,45 @@ import { useState } from 'react';
 
 
      export default function Categoria ({navigation}){
-        const [valor,setValor]=useState(0)
-        const Soja = () => setValor(valor => valor + Number.parseInt(9.99))
-        const _Soja = () => setValor(valor => valor - Number.parseInt(9.99))
+        const [valor,setValor] = useState(0);
+       
+        const Soja = () => setValor(valor + 9); 
+       const _Soja = () => {
+        if ( valor > 0){
+            setValor(valor -9);
+        }
+        else {
+            Alert.alert('Ja esta Zerado')
+        }
+       } 
 
-        const [kg,setPeso]=useState(0)
-        const Peso = () => setPeso(peso => peso +1)
-        const _Peso = () => setPeso(peso => peso -1)
+        const [peso,setPeso]=useState(0);
 
-        const [valor1,setValor1]=useState(0)
-        const Cafe = () => setValor1(valor1 => valor1 + Number.parseInt(2.2))
-        const _Cafe = () => setValor1(valor1 => valor1 - Number.parseInt(2.2))
-
-        const [kg1,setPeso1]=useState(0)
-        const Peso1 = () => setPeso1(peso1 => peso1 +1)
-        const _Peso1 = () => setPeso1(peso1 => peso1 -1)
-
-
+        const Peso = () => setPeso(peso + 1);
+        const _Peso = () => {
+       if (peso > 0) {
+        setPeso(peso - 1);
+       }   
+       }
         
 
+        const [valor1,setValor1]=useState(0)
+        const Cafe = () => setValor1(valor1 + 2 )
+        const _Cafe = () => {
+            if (valor1 > 0 ){
+             setValor1(valor1 -2);
+            } else {
+                Alert.alert('Ja esta Zerado')
+            }
+        }
 
-      
+        const [kg1,setPeso1]=useState(0)
+        const Peso1 = () => setPeso1(kg1 + 1)
+        const _Peso1 = () => {
+            if (kg1 > 0){
+                setPeso1(kg1 -1);
+            }
+        }
 
      return(
 
@@ -49,7 +67,7 @@ import { useState } from 'react';
                 <View style={styles.place}>
                     <TextInput style={styles.border}
             
-                    placeholder ="Valor : R$ 180.00"
+                    editable={false} placeholder ="Valor : R$ 140.00"
                     keyboardType='numeric'
                     />
                      <TextInput style={styles.quant}
@@ -67,11 +85,16 @@ import { useState } from 'react';
                 <Text style={styles.text}>PRODUTOS</Text>
 
                  <View style={styles.prod}>
-                    <Text>SOJA R$ </Text>
-                    <TextInput value={String(valor)}></TextInput>
-                    <Text>   KG   </Text>
-                     <TextInput value={String(kg)}></TextInput>
-                    
+                    <Text>SOJA R$  </Text>
+
+                     <View style={styles.soja}>
+                    <Text> {valor}</Text>
+                     </View>
+
+                    <Text>  KG  </Text>
+                    <View style={styles.soja}>
+                     <Text>{peso}</Text>
+                    </View>
                     
                     <View style={styles.icon}>
                     <IconButton
@@ -79,6 +102,8 @@ import { useState } from 'react';
                       size={20}
                       onPress={() =>{Soja();Peso();}}
                      />
+
+                     
 
                     <IconButton
                       icon="minus"
@@ -90,10 +115,15 @@ import { useState } from 'react';
                 </View>
 
                 <View style={styles.prod1}>
-                    <Text>CAFÉ R$</Text>
-                    <TextInput value={String(valor1)}></TextInput>
-                    <Text>   KG   </Text>
-                     <TextInput value={String(kg1)}></TextInput>
+                    <Text>CAFÉ R$   </Text>
+                    <View style={styles.cafe}>
+                     <Text>{valor1}</Text>
+                     </View>
+
+                    <Text>  KG  </Text>
+                    <View style={styles.cafe}>
+                     <Text>{kg1}</Text>
+                    </View>
                 
                   <View style={styles.icon2}>
                   <IconButton
@@ -107,21 +137,12 @@ import { useState } from 'react';
                       size={20}
                       onPress={() =>{_Cafe();_Peso1();}}
                      />
-
-
-
                   </View>
-
-
-
-
-
-
 
                 </View>
 
                  <View style={styles.tot}>
-                 <TextInput placeholder='TOTAL R$ 140,00'></TextInput>
+                 <TextInput editable={false} placeholder='TOTAL R$ 140,00'></TextInput>
                  </View>
 
                  
@@ -224,13 +245,11 @@ const styles = StyleSheet.create({
     prod : {
         paddingTop:3,
         paddingLeft:40,
-       // backgroundColor:'green',
-        marginBottom:5,
+        marginBottom:9,
         flexDirection:'row'
     },
     prod1 : {
         paddingLeft:40,
-        //backgroundColor:'green',
         flexDirection:'row'
      
     },
@@ -247,7 +266,10 @@ const styles = StyleSheet.create({
         padding:5,
         borderRadius:15,
         borderColor:'#0E6643',
-        marginTop:'12%' 
+        marginTop:'12%',
+        fontSize:20,
+        fontWeight:"bold"
+         
     },
     icon : {
         flexDirection: 'row',
@@ -259,8 +281,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginVertical:-10,
         marginLeft:21,
+    },
+    cafe:{
+        height:22,
+    },
+   soja:{
+        height:22,
     }
-    //ddd
+
 
   });
 
