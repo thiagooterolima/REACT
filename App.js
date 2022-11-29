@@ -15,7 +15,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Categoria">
         <Stack.Screen name="Categoria Produto" component={Categoria}/>
         <Stack.Screen name="Pagamento"  component={Pagamento}/>  
-        <Stack.Screen name="Confirmar Dados"  component={Dados}/>         
+        <Stack.Screen name="Confirmar Dados"  component={Dados}/>           
       </Stack.Navigator>
     </NavigationContainer>
   
