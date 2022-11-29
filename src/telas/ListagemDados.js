@@ -10,6 +10,7 @@ export default function Dados ({navigation}){
           <Vendedor/>
 
 
+
           <View style={estilos.ValorData}>
                 <View>
                     <Text style={estilos.fonte}>Valor</Text>
@@ -23,7 +24,7 @@ export default function Dados ({navigation}){
                 </View>
                 
             </View>
-          
+           
           
           <View style={estilos.total}>
                 <Text style={estilos.total1}>Observação: </Text>
