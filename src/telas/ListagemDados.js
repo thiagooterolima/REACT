@@ -9,12 +9,29 @@ export default function Dados ({navigation}){
         <SafeAreaView>
           <Vendedor/>
 
+
+          <View style={estilos.ValorData}>
+                <View>
+                    <Text style={estilos.fonte}>Valor</Text>
+                    <TextInput style={estilos.fonteInput} placeholder='R$100:00'></TextInput>
+                </View>
+
+                <View>
+                    <Text style={estilos.fonte}>Data</Text>
+                    <TextInput style={estilos.fonteInput} placeholder='05/11/2022'></TextInput> 
+                    <View style={estilos.adicionar}><Button title='Alterar' color='green' onPress={() => navigation.navigate("Pagamento")}/></View>
+                </View>
+                
+            </View>
           
           
           <View style={estilos.total}>
-                <Text style={estilos.total1}>Total: </Text>
-                <TextInput style={estilos.fonteInput}></TextInput>
+                <Text style={estilos.total1}>Observação: </Text>
+                <TextInput style={estilos.fonteInput2}></TextInput>
+                
             </View>
+
+            <View style={estilos.obs}><Text>Observação pedido/entrega/cliente</Text></View>
 
          <View style={estilos.botao}>
             <View style={estilos.direito}>
@@ -81,18 +98,55 @@ const estilos = StyleSheet.create ({
         fontSize: 18,
     },
 
-    fonteInput:{
+    fonteInput2:{
         fontSize:18,
         borderWidth: 1,
-        width: 100,
+        width: 200,
         borderRadius: 20,
         paddingLeft: 8,
         
     },
-       
+     
+    obs:{
+        flexDirection: 'row',
+        justifyContent: 'center',
+        paddingTop: 20,
+    },
    
     
 
+
+    // separaçao
+
+    ValorData:{
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        marginLeft: -90,
+        paddingTop: 20,
+        paddingBottom: 20,
+        
+    },
+
+    fonte: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+
+    adicionar: { //botao adicionar
+        borderWidth: 1,
+        marginRight: 10,
+        borderRadius: 5,        
+    },
+
+    container: { // container do input de valor e data
+        marginLeft: 15,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+
+    botaoContainer: {
+        marginRight: -50,
+    }
         
     
 });
